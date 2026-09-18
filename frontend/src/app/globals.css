@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/*
+  Digital Heroes brand palette: deep navy + cream + sage green + burnt
+  amber. Deliberately not golf-green/plaid - per PRD section 12 the
+  platform should read as a modern, emotion-led charity/reward product,
+  not a traditional golf site. One fixed brand theme (not a light/dark
+  toggle) is intentional here, the same way most brand-led product sites
+  (Stripe, Linear, etc.) don't switch tone with OS preference.
+*/
+:root {
+  --color-navy: #0d1b1e;
+  --color-navy-light: #16292d;
+  --color-cream: #f5f2ea;
+  --color-sage: #7f9e85;
+  --color-sage-light: #a8c2ac;
+  --color-amber: #c17a3f;
+  --color-amber-light: #d99b64;
+  --color-border: rgba(245, 242, 234, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--color-navy);
+  --color-foreground: var(--color-cream);
+  --color-surface: var(--color-navy-light);
+  --color-sage: var(--color-sage);
+  --color-sage-light: var(--color-sage-light);
+  --color-amber: var(--color-amber);
+  --color-amber-light: var(--color-amber-light);
+  --color-border: var(--color-border);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-navy);
+  color: var(--color-cream);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-sage);
+  color: var(--color-navy);
+}
